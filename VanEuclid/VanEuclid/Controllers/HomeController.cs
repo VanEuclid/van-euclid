@@ -37,11 +37,11 @@ namespace VanEuclid.Controllers
             bool userNameRight = false;
             bool passwordRight = false;
 
-            if (Request.Form["username"].Equals("Dy"))
+            if (Request["username"].Equals("Dy"))
             {
                 userNameRight = true;
             }
-            if (Request.Form["password"].Equals("Bethdem338"))
+            if (Request["password"].Equals("Bethdem338"))
             {
                 passwordRight = true;
             }
