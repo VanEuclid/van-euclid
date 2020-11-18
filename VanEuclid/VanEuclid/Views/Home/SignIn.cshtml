@@ -1,0 +1,28 @@
+﻿<style>
+    .bordered {
+        padding: 10px;
+        border: 10px outset grey;
+        border-radius: 16px;
+        background-color: white;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+    <div class="text-center bordered">
+        <h1 class="display-4">Login</h1>
+        <form asp-action="SignInAttempt">
+            <label for="password">Username: </label>
+            <input name="username" type="text" /><br />
+            <label for="password"> Password: </label>
+            <input name="password" type="password" /> <br />
+            <hr />
+            <input type="submit" value="Login" />
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignOut">Sign Out</a>
+        </form>
+    </div>
+</body>
+</html>

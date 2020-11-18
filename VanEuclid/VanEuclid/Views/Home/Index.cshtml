@@ -1,1 +1,38 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    .bordered {
+        padding: 100px;
+        border: 10px outset grey;
+        border-radius: 16px;
+        background-color: white;
+    }
+
+    img {
+        width: 90%;
+        height: 80%;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+    <div class="text-center bordered">
+        <p style="font-size:larger;">
+            HELLO, WORLD!
+        </p>
+        <h1 class="display-4" style="font: bold"> I'm Van Euclid Dy</h1>
+        <p>
+            FULL STACK DEVELOPER | MOBILE iOS DEVELOPER<br /><br />
+
+            Welcome to my personal website and online portfolio.<br /><br />
+
+            <a onclick="location.href='@Url.Action("Contact", "Home")'"><button type="button" style="background-color: grey; color: white; height: 50px; width: 200px;">About Van</button></a>
+        </p>
+    </div>
+</body>
+</html>

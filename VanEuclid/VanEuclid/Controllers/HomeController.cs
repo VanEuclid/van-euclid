@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using VanEuclid.Content;
 
 namespace VanEuclid.Controllers
 {
@@ -11,12 +12,53 @@ namespace VanEuclid.Controllers
     {
         public ActionResult Index()
         {
-            var mvcName = typeof(Controller).Assembly.GetName();
-            var isMono = Type.GetType("Mono.Runtime") != null;
+            ViewData["Logged"] = Globals.LoginStatus;
+            return View();
+        }
 
-            ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            ViewData["Runtime"] = isMono ? "Mono" : ".NET";
+        public ActionResult LLC()
+        {
+            return View();
+        }
 
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
+        public ActionResult SignOut()
+        {
+            Globals.LoginStatus = false;
+            return View("Index");
+        }
+
+        public ActionResult SignInAttempt()
+        {
+            bool userNameRight = false;
+            bool passwordRight = false;
+
+            if (Request.Form["username"].Equals("Dy"))
+            {
+                userNameRight = true;
+            }
+            if (Request.Form["password"].Equals("Bethdem338"))
+            {
+                passwordRight = true;
+            }
+
+            if (userNameRight && passwordRight)
+            {
+                Globals.LoginStatus = true;
+                return View("Index");
+            }
+            else
+            {
+                return View("SignIn");
+            }
+        }
+
+        public ActionResult Contact()
+        {
             return View();
         }
     }

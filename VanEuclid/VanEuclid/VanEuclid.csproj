@@ -64,6 +64,7 @@
     <Folder Include="Content\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
@@ -71,16 +72,58 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Content\Globals.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\css\site.css" />
+    <Content Include="Scripts\js\site.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.js" />
+    <Content Include="Scripts\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Views\Home\SignIn.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\LLC.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\favicon.ico" />
+    <None Include="Scripts\lib\bootstrap\LICENSE" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="Scripts\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="Scripts\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="Scripts\lib\jquery\LICENSE.txt" />
+    <None Include="Scripts\lib\jquery\dist\jquery.min.map" />
+    <None Include="Scripts\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Include="Scripts\lib\jquery-validation\LICENSE.md" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
