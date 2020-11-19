@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<style>
+    .bordered {
+        padding: 10px;
+        border: 10px outset grey;
+        border-radius: 16px;
+        background-color: white;
+    }
+
+    .imgPort {
+        width: 90%;
+        height: 80%;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+    <div class="text-center bordered">
+        <h1 class="display-4">Portfolio</h1>
+        <p>
+            These are some of the highlights of my Portfolio, most of it is also included in my
+
+            <br /><br />
+            <a href="https://github.com/VanEuclid" style="color:mediumblue">GitHub</a>
+            <br /><br />
+
+            <img src="https://i.ibb.co/RzgGX3d/Overclocked.jpg" alt="Overclocked" class="imgPort"> <br /><br />
+            <a href="https://store.steampowered.com/app/827220/Overclocked_The_Aclockalypse/" style="color:mediumblue">Overclocked The Aclockalypse</a><br />
+            Lead game design engineer for the video game; Worked in a large team of engineers and artist. <br />
+            Key components I added to the game are bosses, procedural level generation and general game design. <br /><br />
+
+            <img src="https://s1.qwant.com/thumbr/0x0/a/8/e4434176345ae7fd8f293e230a64f43e2c9f7f8ab0ff7912c209395b09affb/sudoku-solver-animation.gif?u=https%3A%2F%2Fsudokusolver.com%2Fimages%2Fanimations%2Fsudoku-solver-animation.gif&q=0&b=1&p=0&a=1" alt="Sudoku Solver" />
+            <a class="nav-link" onclick="location.href='@Url.Action("Sudoku", "Portfolio")'" style="color:mediumblue ">Sudoku Solver</a>
+            <a href="https://github.com/VanEuclid/van-euclid-website/blob/main/VanEuclidWebsite/VanEuclidWebsite/PortfolioClasses/SudokuSolver.cs">The Sudoku Solver's Implementation is found here.</a> <br />
+            Program was originally programmed in Java but I refactored it into C# for this website.<br />
+            The algorithm is recursive, finding configurations of the board for a solution and backtracking if it gets stuck.<br /><br />
+
+            <img src="https://i.makeagif.com/media/6-19-2016/SfI8x7.gif" alt="Seam Carver" style="height: 40%; width:50%;" />
+            <a class="nav-link" asp-area="" asp-controller="Portfolio" asp-action="SeamCarve" style="color:mediumblue ">Seam Carver</a>
+            <a href="https://github.com/VanEuclid/van-euclid-website/blob/main/VanEuclidWebsite/VanEuclidWebsite/PortfolioClasses/SeamCarver.cs">The Seam Carver's implementation is found here.</a> <br />
+            Program was originally programmed in Java but I refactored it into C# for this website. <br />
+            The algorithm only does horizontal Seam Carving, it will take a few seconds to complete and it is capped at 10 seams.
+        </p>
+    </div>
+</body>
+</html>
