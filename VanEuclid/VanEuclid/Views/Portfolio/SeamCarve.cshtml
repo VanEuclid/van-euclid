@@ -19,10 +19,9 @@
     <div class="text-center bordered">
         <p>
             <h1 class="display-4">Seam Carver</h1>
-            This is a horizontal only Seam Carver algorithm and is really for portolio purposes.<br />
-            Time to completion of the algorithm will vary based on the image's size; I set max seams to 10.<br />
+            This is a horizontal only Seam Carver algorithm and is for portolio purposes.<br />
+            Time to completion of the algorithm will vary based on the image's size; max seams is set to 10.<br />
         </p>
-
         @using (Html.BeginForm("SeamCarver", "Portfolio", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <span>
@@ -39,15 +38,6 @@
             <input type="submit" value="Upload" />
             <br />
         }
-
-        @*<form action="SeamCarver" method="post" enctype="multipart/form-data">
-            <input type="file" name="IMAGE" accept="image/x-png,image/gif,image/jpeg" required /><br />
-            <input type="checkbox" name="seamVisible" style="width:25px; height:25px;" checked />
-            <input type="number" name="numberOfSeams" min="1" max="10" value="1" />
-            <hr />
-            <input type="submit" value="Upload" />
-        </form>*@
-
     </div>
 </body>
 </html>

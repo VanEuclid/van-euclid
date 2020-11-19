@@ -16,6 +16,10 @@
         width: 100%;
         height: 100%;
     }
+
+    .cursoredit {
+        cursor: pointer;
+    }
 </style>
 
 <html>
@@ -27,10 +31,10 @@
         <h1 class="display-4">Seam Carver</h1>
         <p>
             If you wanna save the resulting image, just right click and Save Image As.<br />
-            If seams are visible was set, any white 'tears' are the seams of the algorithm, i.e. where compression of the image would happen.<br />
+            If Visible Seams is set, any white 'tears' are the seams of the algorithm or where compression of the image would happen.<br />
         </p>
         <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(Model))" /><br />
-        <a class="nav-link text-dark" asp-area="" asp-controller="Portfolio" asp-action="SeamCarve">Back</a>
+        <a class="nav-link text-dark cursoredit" onclick="location.href='@Url.Action("SeamCarve", "Portfolio")'">Back</a>
     </div>
 </body>
 </html>

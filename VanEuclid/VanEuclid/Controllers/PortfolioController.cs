@@ -44,7 +44,6 @@ namespace VanEuclid.Controllers
 
         public ActionResult SeamCarver()
         {
-            //Bitmap originalImage = (Bitmap)Bitmap.FromStream(postedFile);
             byte[] byteImage = WebImage.GetImageFromRequest("postedFile").GetBytes();
 
             Bitmap originalImage;
@@ -53,12 +52,12 @@ namespace VanEuclid.Controllers
                 originalImage = new Bitmap(ms);
             }
 
-            int numberOfSeams = int.Parse(Request.Form["numberOfSeams"]);
+            int numberOfSeams = int.Parse(Request["numberOfSeams"]);
 
-            bool seamVisible = false;
-            if (Request.Form["seamVisible"].Equals("on"))
+            bool seamVisible = true;
+            if (Request["seamVisible"] == null)
             {
-                seamVisible = true;
+                seamVisible = false;
             }
 
             SeamCarver seamCarve = new SeamCarver(originalImage, seamVisible, numberOfSeams);
