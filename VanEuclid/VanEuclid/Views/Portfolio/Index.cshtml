@@ -14,6 +14,10 @@
         width: 90%;
         height: 80%;
     }
+
+    .cursoredit {
+        cursor: pointer;
+    }
 </style>
 
 <html>
@@ -36,7 +40,7 @@
             Key components I added to the game are bosses, procedural level generation and general game design. <br /><br />
 
             <img src="https://s1.qwant.com/thumbr/0x0/a/8/e4434176345ae7fd8f293e230a64f43e2c9f7f8ab0ff7912c209395b09affb/sudoku-solver-animation.gif?u=https%3A%2F%2Fsudokusolver.com%2Fimages%2Fanimations%2Fsudoku-solver-animation.gif&q=0&b=1&p=0&a=1" alt="Sudoku Solver" />
-            <a class="nav-link" onclick="location.href='@Url.Action("Sudoku", "Portfolio")'" style="color:mediumblue ">Sudoku Solver</a>
+            <a class="nav-link cursoredit" onclick="location.href='@Url.Action("Sudoku", "Portfolio")'" style="color:mediumblue ">Sudoku Solver</a>
             <a href="https://github.com/VanEuclid/van-euclid-website/blob/main/VanEuclidWebsite/VanEuclidWebsite/PortfolioClasses/SudokuSolver.cs">The Sudoku Solver's Implementation is found here.</a> <br />
             Program was originally programmed in Java but I refactored it into C# for this website.<br />
             The algorithm is recursive, finding configurations of the board for a solution and backtracking if it gets stuck.<br /><br />

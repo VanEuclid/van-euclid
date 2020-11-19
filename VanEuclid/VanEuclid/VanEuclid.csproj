@@ -76,6 +76,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Content\Globals.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
+    <Compile Include="Content\SudokuSolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -110,6 +111,8 @@
     <Content Include="Views\Home\LLC.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Portfolio\Index.cshtml" />
+    <Content Include="Views\Portfolio\Sudoku.cshtml" />
+    <Content Include="Views\Portfolio\SudokuSolver.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\favicon.ico" />

@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Sudoku";
+}
+
+<style>
+    .bordered {
+        padding: 10px;
+        border: 10px outset grey;
+        border-radius: 16px;
+        background-color: white;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+    <div class="text-center bordered">
+        <h1 class="display-4">Sudoku Solver</h1>
+        The Sudoku Solver uses a recursive backtracking algorithm to find valid board configurations to solve. <br />
+        I recommend using Sudokus that you have a solution for to check for correctness if unsure about validity of result. <br />
+        <form action="SudokuSolver">
+            <p style="padding-top:15px">
+                <input name="cell0" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="" />
+                <input name="cell1" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="" />
+                <input name="cell2" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="" />
+                <input name="cell3" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="2" />
+                <input name="cell4" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="6" />
+                <input name="cell5" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="" />
+                <input name="cell6" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="7" />
+                <input name="cell7" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="" />
+                <input name="cell8" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="1" /> <br />
+
+                <input name="cell9" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="6" />
+                <input name="cell10" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="8" />
+                <input name="cell11" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="" />
+                <input name="cell12" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="" />
+                <input name="cell13" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="7" />
+                <input name="cell14" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="" />
+                <input name="cell15" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="" />
+                <input name="cell16" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="9" />
+                <input name="cell17" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="" /> <br />
+
+                <input name="cell18" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="1" />
+                <input name="cell19" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="9" />
+                <input name="cell20" type="number" min="0" max="9" style="width:50px; background-color:#FF666E" value="" />
+                <input name="cell21" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="" />
+                <input name="cell22" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="" />
+                <input name="cell23" type="number" min="0" max="9" style="width:50px; background-color:#66FF7A" value="4" />
+                <input name="cell24" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="5" />
+                <input name="cell25" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="" />
+                <input name="cell26" type="number" min="0" max="9" style="width:50px; background-color:#C799FF" value="" /> <br />
+
+                <input name="cell27" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="8" />
+                <input name="cell28" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="2" />
+                <input name="cell29" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="" />
+                <input name="cell30" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="1" />
+                <input name="cell31" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="" />
+                <input name="cell32" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="" />
+                <input name="cell33" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="" />
+                <input name="cell34" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="4" />
+                <input name="cell35" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="" /> <br />
+
+                <input name="cell36" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="" />
+                <input name="cell37" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="" />
+                <input name="cell38" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="4" />
+                <input name="cell39" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="6" />
+                <input name="cell40" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="" />
+                <input name="cell41" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="2" />
+                <input name="cell42" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="9" />
+                <input name="cell43" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="" />
+                <input name="cell44" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="" /> <br />
+
+                <input name="cell45" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="" />
+                <input name="cell46" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="5" />
+                <input name="cell47" type="number" min="0" max="9" style="width:50px; background-color:#FDFF99" value="" />
+                <input name="cell48" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="" />
+                <input name="cell49" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="" />
+                <input name="cell50" type="number" min="0" max="9" style="width:50px; background-color:#99E7FF" value="3" />
+                <input name="cell51" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="" />
+                <input name="cell52" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="2" />
+                <input name="cell53" type="number" min="0" max="9" style="width:50px; background-color:#FFE499" value="8" /> <br />
+
+                <input name="cell54" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="" />
+                <input name="cell55" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="" />
+                <input name="cell56" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="9" />
+                <input name="cell57" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="3" />
+                <input name="cell58" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="" />
+                <input name="cell59" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="" />
+                <input name="cell60" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="" />
+                <input name="cell61" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="7" />
+                <input name="cell62" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="4" /> <br />
+
+                <input name="cell63" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="" />
+                <input name="cell64" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="4" />
+                <input name="cell65" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="" />
+                <input name="cell66" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="" />
+                <input name="cell67" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="5" />
+                <input name="cell68" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="" />
+                <input name="cell69" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="" />
+                <input name="cell70" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="3" />
+                <input name="cell71" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="6" /> <br />
+
+                <input name="cell72" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="7" />
+                <input name="cell73" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="" />
+                <input name="cell74" type="number" min="0" max="9" style="width:50px; background-color:#FF99FD" value="3" />
+                <input name="cell75" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="" />
+                <input name="cell76" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="1" />
+                <input name="cell77" type="number" min="0" max="9" style="width:50px; background-color:#CCFFCC" value="8" />
+                <input name="cell78" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="" />
+                <input name="cell79" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="" />
+                <input name="cell80" type="number" min="0" max="9" style="width:50px; background-color:#FF0070" value="" /> <br />
+            </p>
+            <input value="Solve" type="Submit" />
+        </form>
+    </div>
+</body>
+</html>
