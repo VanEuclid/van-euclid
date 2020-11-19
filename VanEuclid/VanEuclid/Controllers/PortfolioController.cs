@@ -41,6 +41,24 @@ namespace VanEuclid.Controllers
             return View();
         }
 
+        //public ActionResult SeamCarver(File postedFile)
+        //{
+        //    Bitmap originalImage = (Bitmap)Bitmap.FromStream(postedFile.OpenReadStream());
+        //    int numberOfSeams = int.Parse(Request.Form["numberOfSeams"]);
+
+        //    bool seamVisible = false;
+        //    if (Request.Form["seamVisible"].Equals("on"))
+        //    {
+        //        seamVisible = true;
+        //    }
+
+        //    SeamCarver seamCarve = new SeamCarver(originalImage, seamVisible, numberOfSeams);
+        //    Image filteredImage = seamCarve.fil;
+        //    byte[] imageInBytes = ImageToByte(filteredImage);
+
+        //    return View(imageInBytes);
+        //}
+
         public ActionResult SudokuSolver()
         {
             int[] inputBoard = new int[81];
