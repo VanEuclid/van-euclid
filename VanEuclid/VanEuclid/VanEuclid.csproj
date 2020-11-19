@@ -78,7 +78,6 @@
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Content\SudokuSolver.cs" />
     <Compile Include="Content\SeamCarver.cs" />
-    <Compile Include="Models\BlogPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -108,7 +107,6 @@
     <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.js" />
     <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.min.js" />
     <Content Include="Scripts\lib\jquery-validation\dist\jquery.validate.js" />
-    <Content Include="Views\Home\SignIn.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\LLC.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
