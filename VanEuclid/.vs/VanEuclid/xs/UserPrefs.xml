@@ -1,22 +1,16 @@
 ﻿<Properties StartupConfiguration="{40FE9B5D-F361-44B0-8F95-759862954748}|">
   <MonoDevelop.Ide.ItemProperties.VanEuclid PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Views/Portfolio/Index.cshtml">
-    <Files>
-      <File FileName="VanEuclid/Views/Portfolio/Index.cshtml" Line="34" Column="75" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VanEuclid" expanded="True">
             <Node name="VanEuclid" expanded="True">
-              <Node name="Content" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
                 <Node name="Portfolio" expanded="True">
                   <Node name="Index.cshtml" selected="True" />
                 </Node>
-                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>

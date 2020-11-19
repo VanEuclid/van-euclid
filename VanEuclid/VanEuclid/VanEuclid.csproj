@@ -78,6 +78,7 @@
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Content\SudokuSolver.cs" />
     <Compile Include="Content\SeamCarver.cs" />
+    <Compile Include="Models\BlogPost.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
