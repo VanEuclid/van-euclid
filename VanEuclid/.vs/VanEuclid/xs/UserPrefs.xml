@@ -1,27 +1,26 @@
 ﻿<Properties StartupConfiguration="{40FE9B5D-F361-44B0-8F95-759862954748}|">
   <MonoDevelop.Ide.ItemProperties.VanEuclid PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Controllers/PortfolioController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Views/Portfolio/SeamCarve.cshtml">
     <Files>
-      <File FileName="VanEuclid/Views/Shared/_Layout.cshtml" Line="22" Column="106" />
-      <File FileName="VanEuclid/Views/Portfolio/Index.cshtml" Line="49" Column="43" />
-      <File FileName="VanEuclid/Views/Portfolio/SeamCarve.cshtml" Line="33" Column="57" />
-      <File FileName="VanEuclid/Controllers/PortfolioController.cs" Line="43" Column="1" />
+      <File FileName="VanEuclid/Controllers/PortfolioController.cs" Line="54" Column="14" />
+      <File FileName="VanEuclid/Views/Portfolio/SeamCarve.cshtml" Line="44" Column="43" />
+      <File FileName="VanEuclid/Views/Portfolio/SeamCarver.cshtml" Line="32" Column="87" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VanEuclid" expanded="True">
             <Node name="VanEuclid" expanded="True">
-              <Node name="References" expanded="True" />
               <Node name="Content" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="PortfolioController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
-                <Node name="Portfolio" expanded="True" />
+                <Node name="Portfolio" expanded="True">
+                  <Node name="SeamCarve.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
+              <Node name="Global.asax" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -31,7 +30,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/van/Documents/Github/van-euclid/VanEuclid/VanEuclid/Controllers/PortfolioController.cs" relfile="VanEuclid/Controllers/PortfolioController.cs" line="48" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

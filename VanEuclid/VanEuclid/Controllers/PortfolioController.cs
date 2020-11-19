@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using VanEuclid.Content;
 using System.Drawing;
+using System.Web.Helpers;
 
 namespace VanEuclid.Controllers
 {
@@ -41,23 +42,31 @@ namespace VanEuclid.Controllers
             return View();
         }
 
-        //public ActionResult SeamCarver(File postedFile)
-        //{
-        //    Bitmap originalImage = (Bitmap)Bitmap.FromStream(postedFile.OpenReadStream());
-        //    int numberOfSeams = int.Parse(Request.Form["numberOfSeams"]);
+        public ActionResult SeamCarver()
+        {
+            //Bitmap originalImage = (Bitmap)Bitmap.FromStream(postedFile);
+            byte[] byteImage = WebImage.GetImageFromRequest("postedFile").GetBytes();
 
-        //    bool seamVisible = false;
-        //    if (Request.Form["seamVisible"].Equals("on"))
-        //    {
-        //        seamVisible = true;
-        //    }
+            Bitmap originalImage;
+            using (var ms = new MemoryStream(byteImage))
+            {
+                originalImage = new Bitmap(ms);
+            }
 
-        //    SeamCarver seamCarve = new SeamCarver(originalImage, seamVisible, numberOfSeams);
-        //    Image filteredImage = seamCarve.fil;
-        //    byte[] imageInBytes = ImageToByte(filteredImage);
+            int numberOfSeams = int.Parse(Request.Form["numberOfSeams"]);
 
-        //    return View(imageInBytes);
-        //}
+            bool seamVisible = false;
+            if (Request.Form["seamVisible"].Equals("on"))
+            {
+                seamVisible = true;
+            }
+
+            SeamCarver seamCarve = new SeamCarver(originalImage, seamVisible, numberOfSeams);
+            Image filteredImage = seamCarve.fil;
+            byte[] imageInBytes = ImageToByte(filteredImage);
+
+            return View(imageInBytes);
+        }
 
         public ActionResult SudokuSolver()
         {
