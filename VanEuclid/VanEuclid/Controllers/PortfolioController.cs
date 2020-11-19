@@ -14,6 +14,12 @@ namespace VanEuclid.Controllers
             return View ();
         }
 
+
+        public ActionResult SeamCarve()
+        {
+            return View();
+        }
+
         public ActionResult Sudoku()
         {
             return View();

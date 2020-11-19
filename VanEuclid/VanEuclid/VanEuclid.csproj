@@ -113,6 +113,7 @@
     <Content Include="Views\Portfolio\Index.cshtml" />
     <Content Include="Views\Portfolio\Sudoku.cshtml" />
     <Content Include="Views\Portfolio\SudokuSolver.cshtml" />
+    <Content Include="Views\Portfolio\SeamCarve.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\favicon.ico" />

@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Seam Carve";
+}
+
+<style>
+    .bordered {
+        padding: 10px;
+        border: 10px outset grey;
+        border-radius: 16px;
+        background-color: white;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)">
+    <div class="text-center bordered">
+        <p>
+            <h1 class="display-4">Seam Carver</h1>
+            This is a horizontal only Seam Carver algorithm and is really for portolio purposes.<br />
+            Time to completion of the algorithm will vary based on the image's size; I set max seams to 10.<br />
+        </p>
+        @using (Html.BeginForm("SeamCarver", "Portfolio", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <span>
+                Select File:
+                <input type="file" name="postedFile" accept="image/x-png,image/gif,image/jpeg" required />
+                <br />
+                <br />   
+                Visible Seams:
+                <input type="checkbox" name="seamVisible" style="width:25px; height:25px;" checked />
+                Number of Seams:
+                <input type="number" name="numberOfSeams" min="1" max="10" value="1" />
+            </span>
+            <hr />
+            <input type="submit" value="Upload" />
+            <br />
+            @*<span style="color:green">@ViewBag.Message</span>*@
+        }
+    </div>
+</body>
+</html>

@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{40FE9B5D-F361-44B0-8F95-759862954748}|">
   <MonoDevelop.Ide.ItemProperties.VanEuclid PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Views/Portfolio/SeamCarve.cshtml">
     <Files>
-      <File FileName="VanEuclid/Views/Shared/_Layout.cshtml" Line="5" Column="1" />
-      <File FileName="VanEuclid/Views/Portfolio/Index.cshtml" Line="39" Column="76" />
-      <File FileName="VanEuclid/Controllers/PortfolioController.cs" Line="24" Column="1" />
-      <File FileName="VanEuclid/Views/Portfolio/Sudoku.cshtml" Line="23" Column="29" />
-      <File FileName="VanEuclid/Views/Portfolio/SudokuSolver.cshtml" Line="14" Column="23" />
+      <File FileName="VanEuclid/Views/Shared/_Layout.cshtml" Line="22" Column="106" />
+      <File FileName="VanEuclid/Views/Portfolio/Index.cshtml" Line="43" Column="43" />
+      <File FileName="VanEuclid/Controllers/PortfolioController.cs" Line="18" Column="16" />
+      <File FileName="VanEuclid/Views/Portfolio/SeamCarve.cshtml" Line="33" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,10 +16,10 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
-                <Node name="Portfolio" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
+                <Node name="Portfolio" expanded="True">
+                  <Node name="SeamCarve.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
