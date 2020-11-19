@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VanEuclid.Content;
+using System.Drawing;
 
 namespace VanEuclid.Controllers
 {
@@ -18,6 +20,20 @@ namespace VanEuclid.Controllers
         public ActionResult SeamCarve()
         {
             return View();
+        }
+
+        /// <summary>
+        /// Helper method for seam carve. Creates a byte[] for image processing purposes
+        /// </summary>
+        /// <param name="img">image to process into a byte[]</param>
+        /// <returns>byte[] of the image</returns>
+        public static byte[] ImageToByte(Image img)
+        {
+            using (var stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                return stream.ToArray();
+            }
         }
 
         public ActionResult Sudoku()
