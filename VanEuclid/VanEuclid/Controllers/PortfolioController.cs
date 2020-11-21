@@ -23,30 +23,11 @@ namespace VanEuclid.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Helper method for seam carve. Creates a byte[] for image processing purposes
-        /// </summary>
-        /// <param name="img">image to process into a byte[]</param>
-        /// <returns>byte[] of the image</returns>
-        public static byte[] ImageToByte(Image img)
-        {
-            using (var stream = new MemoryStream())
-            {
-                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                return stream.ToArray();
-            }
-        }
-
-        public ActionResult Sudoku()
-        {
-            return View();
-        }
-
         public ActionResult SeamCarver()
         {
             byte[] byteImage = WebImage.GetImageFromRequest("postedFile").GetBytes();
 
-            Bitmap originalImage;
+            Bitmap originalImage; //taking the byte[] and turn into a Image
             using (var ms = new MemoryStream(byteImage))
             {
                 originalImage = new Bitmap(ms);
@@ -62,9 +43,20 @@ namespace VanEuclid.Controllers
 
             SeamCarver seamCarve = new SeamCarver(originalImage, seamVisible, numberOfSeams);
             Image filteredImage = seamCarve.fil;
-            byte[] imageInBytes = ImageToByte(filteredImage);
+
+            byte[] imageInBytes; //taking the Image and turn into byte[]
+            using (var stream = new MemoryStream())
+            {
+                filteredImage.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                imageInBytes = stream.ToArray();
+            }
 
             return View(imageInBytes);
+        }
+
+        public ActionResult Sudoku()
+        {
+            return View();
         }
 
         public ActionResult SudokuSolver()

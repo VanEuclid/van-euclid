@@ -7,13 +7,11 @@
           <Node name="VanEuclid" expanded="True">
             <Node name="VanEuclid" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Scripts" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Portfolio" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
+                <Node name="Portfolio" expanded="True">
+                  <Node name="SeamCarver.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
