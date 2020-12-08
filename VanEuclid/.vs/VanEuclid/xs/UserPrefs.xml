@@ -1,16 +1,33 @@
 ﻿<Properties StartupConfiguration="{40FE9B5D-F361-44B0-8F95-759862954748}|">
   <MonoDevelop.Ide.ItemProperties.VanEuclid PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="VanEuclid/Scripts/lib/bootstrap/dist/css/bootstrap.min.css">
+    <Files>
+      <File FileName="VanEuclid/Scripts/css/site.css" Line="1" Column="1" />
+      <File FileName="VanEuclid/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="VanEuclid/Scripts/lib/bootstrap/dist/css/bootstrap.min.css" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VanEuclid" expanded="True">
             <Node name="VanEuclid" expanded="True">
+              <Node name="Content" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Portfolio" expanded="True">
-                  <Node name="SeamCarver.cshtml" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="dist" expanded="True">
+                      <Node name="css" expanded="True">
+                        <Node name="bootstrap.min.css" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Portfolio" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
